@@ -5,7 +5,8 @@ export const ballValues: Record<string, number> = {
     brown: 4,
     blue: 5,
     pink: 6,
-    black: 7
+    black: 7,
+    foul: 4
   };
   
   /**
@@ -20,3 +21,14 @@ export const ballValues: Record<string, number> = {
     return ballValues[ballColour];
   }
   
+    /**
+     * Returns the score of a potted ball based on its color.
+     * @param foulColour - The color of the ball potted.
+     * @returns The point value of the ball.
+     */
+    export function getFoulScore(ballColour: string): number {
+      if (!(ballColour in ballValues)) {
+        throw new Error(`Invalid ball color: ${ballColour}`);
+      }
+      return ballValues[ballColour];
+    }
