@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { getBallScore, getFoulScore } from "../potBall.tsx";
+import { getBallScore, getFoulScore } from "../scorePoints.tsx";
 
 describe("Ball Scoring System", () => {
   it("returns the correct score for a red ball", () => {
